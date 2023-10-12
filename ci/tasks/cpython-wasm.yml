@@ -13,9 +13,13 @@ outputs:
 - name: builddir
   path: repo/builddir/((target))
 
+caches:
+- path: .ccache
+
 params:
   ACTION: build
   EM_CONFIG: /emsdk/.emscripten
+  CCACHE_DIR: .ccache
 
 run:
   path: sh
