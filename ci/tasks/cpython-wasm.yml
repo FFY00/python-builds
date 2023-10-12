@@ -10,7 +10,8 @@ inputs:
 - name: repo
 
 outputs:
-- builddir: repo/builddir/((target))
+- name: builddir
+  path: repo/builddir/((target))
 
 params:
   ACTION: build
