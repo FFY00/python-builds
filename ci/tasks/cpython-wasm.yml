@@ -10,7 +10,7 @@ inputs:
 - name: repo
 
 outputs:
-- name: builddir
+- name: builddir-((target))
   path: repo/builddir/((target))
 
 caches:
