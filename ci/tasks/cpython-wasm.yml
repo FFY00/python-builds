@@ -15,7 +15,7 @@ outputs:
 
 params:
   ACTION: build
-  EM_CONFIG: /emsdk
+  EM_CONFIG: /emsdk/.emscripten
 
 run:
   path: sh
