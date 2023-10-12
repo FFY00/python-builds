@@ -1,0 +1,35 @@
+---
+resources:
+- name: repo
+  type: git
+  source:
+    uri: https://github.com/FFY00/python-builds
+- name: cpython-git
+  type: git
+  icon: github
+  source:
+    uri: https://github.com/python/cpython
+
+jobs:
+- name: cpython-wasm
+  public: true
+  plan:
+  - in_parallel:
+    - get: repo
+    - get: cpython-git
+      trigger: true
+  - across:
+    - var: target
+      values:
+      - emscripten-browser
+      - emscripten-browser-debug
+      - emscripten-node-dl
+      - emscripten-node-dl-debug
+      - emscripten-node-pthreads
+      - emscripten-node-pthreads-debug
+      - emscripten-node-dl-pthreads-debug
+      - wasm64-emscripten-node-debug
+      - wasi
+      - wasi-threads
+    set_pipeline: build
+    file: repo/ci/tasks/build-cpython-wasm.yml
