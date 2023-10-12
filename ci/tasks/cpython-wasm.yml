@@ -13,9 +13,8 @@ params:
   ACTION: build
 
 run:
-  path: python3
+  path: sh
   args:
-    - Tools/wasm/wasm_build.py
-    - ((target))
-    - $ACTION
+    - -c
+    - python3 Tools/wasm/wasm_build.py ((target)) $ACTION
   dir: repo
