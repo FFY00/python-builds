@@ -12,5 +12,5 @@ inputs:
 run:
   path: sh
   args:
-    - cpython-git/Tools/wasm/wasm_build.py
+    - repo/Tools/wasm/wasm_build.py
     - ((target))
