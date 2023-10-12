@@ -10,7 +10,7 @@ inputs:
 - name: repo
 
 run:
-  path: python
+  path: python3
   args:
     - repo/Tools/wasm/wasm_build.py
     - ((target))
