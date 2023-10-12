@@ -14,6 +14,7 @@ outputs:
 
 params:
   ACTION: build
+  EM_CONFIG: /emsdk
 
 run:
   path: sh
