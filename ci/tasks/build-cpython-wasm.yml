@@ -14,3 +14,4 @@ run:
   args:
     - repo/Tools/wasm/wasm_build.py
     - ((target))
+    - build
