@@ -9,10 +9,13 @@ image_resource:
 inputs:
 - name: repo
 
+params:
+  ACTION: build
+
 run:
   path: python3
   args:
     - Tools/wasm/wasm_build.py
     - ((target))
-    - build
+    - $ACTION
   dir: repo
